@@ -22,3 +22,10 @@ before_install:
   - gem install bundler
 
 dist: trusty
+
+# speed up jruby installation
+# https://github.com/travis-ci/docs-travis-ci-com/pull/743
+addons:
+  apt:
+    packages:
+      - haveged
