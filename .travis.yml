@@ -13,3 +13,10 @@ rvm:
 
 script:
   bundle exec rake test
+
+before_install:
+  # install latest rubygems
+  - gem update --system
+  # bundler installation needed for jruby-head
+  # https://github.com/travis-ci/travis-ci/issues/5861
+  - gem install bundler
